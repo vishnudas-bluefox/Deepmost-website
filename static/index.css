@@ -1,0 +1,95 @@
+@media (min-width: 768px) {
+    .full-height-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+  
+    .full-height-section > .container {
+      width: 100%;
+    }
+  }
+  
+  
+  
+  
+  .neumorphic-input-dark {
+      background: #1c1917;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 5px #0c0a09, 
+                  inset -2px -2px 5px #292524;
+      transition: all 0.3s ease;
+  }
+  
+  .neumorphic-input-dark input,
+  .neumorphic-input-dark textarea {
+      background: transparent;
+      color: #d6d3d1;
+      transition: all 0.3s ease;
+  }
+  
+  .neumorphic-input-dark input::placeholder,
+  .neumorphic-input-dark textarea::placeholder {
+      color: #808080;
+  }
+  
+  .neumorphic-input-dark:focus-within {
+      box-shadow: 5px 5px 10px #0c0a09, 
+                -5px -5px 10px #292524;
+                transition: all 0.3s ease;
+  }
+  
+  .neumorphic-input-dark input:focus,
+  .neumorphic-input-dark textarea:focus {
+      outline: none;
+      transition: all 0.3s ease;
+  }
+  
+  
+  
+  
+  .neumorphic-button {
+      background-color: transparent;
+      border: 1px solid #CC785C;
+      color: #CC785C;
+      box-shadow: 5px 5px 10px #0c0a09, 
+                  -5px -5px 10px #292524;
+      transition: all 0.3s ease;
+  }
+  
+  .neumorphic-button:hover {
+      background-color: #CC785C;
+      color: white;
+  }
+  
+  .neumorphic-button:active {
+      background-color: #1c1917;
+      border: 0px solid #1c1917;
+      box-shadow: 2px 2px 5px #0c0a09, 
+                  -2px -2px 5px #292524;
+  }
+  
+  
+  
+  
+  .explore-lexeek-button {
+      background-color: #CC785C;
+      border: 2px solid #CC785C;
+      color: white;
+      box-shadow: 5px 5px 10px #bab8b1, 
+                  -5px -5px 10px #fff;
+  }
+  
+  .explore-lexeek-button:hover {
+      background-color: #9f573f;
+      border: 2px solid #9f573f;
+  }
+  
+  
+  .explore-lexeek-button:active {
+      color: #44403c;
+      background-color: transparent;
+      border: 2px solid #CC785C;
+      box-shadow: 5px 5px 10px #bab8b1, 
+                  -5px -5px 10px #fff;
+  }
