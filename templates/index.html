@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeepMost</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link href="static/index.css" rel="stylesheet">
 </head>
 <body class="font-sans bg-stone-100">
     <!-- Navbar -->
     <nav class="bg-[#E6E4DD] p-4" x-data="{ isOpen: false }">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-stone-700 text-2xl font-extrabold">DeepMost</a>
+            <div class="flex items-center">
+                <img src="static/logo.png" alt="DeepMost Logo" class="h-8 w-auto mr-2">
+                <a href="#" class="text-stone-700 text-2xl font-extrabold">DeepMost</a>
+            </div>
             
             <!-- Hamburger button -->
             <button @click="isOpen = !isOpen" class="md:hidden text-white focus:outline-none ">
@@ -92,7 +95,7 @@
             <h2 class="text-5xl md:text-6xl font-bold mb-6 text-stone-800">Products</h2>
             
             <p class="text-lg md:text-xl mb-8 text-stone-600">
-                At DeepMost, we're dedicated to creating products that solve real-world problems. Our approach combines cutting-edge research with practical applications, always focusing on user needs and business value. While our vision extends to various sectors including healthcare and public safety, we're currently channeling our expertise into our flagship product:
+                We're dedicated to creating products that solve real-world problems. Our approach combines cutting-edge research with practical applications, always focusing on user needs and business value. While our vision extends to various sectors including healthcare and public safety, we're currently channeling our expertise into our flagship product:
             </p>
 
             <div class="flex flex-col md:flex-row items-start mt-12">
@@ -121,14 +124,26 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center text-stone-700">Our Co-founders</h2>
             <div class="flex flex-col md:flex-row justify-center md:space-x-20 space-y-10 md:space-y-0">
                 <div class="text-center">
-                    <div class="bg-gray-300 w-48 h-48 rounded-full mx-auto mb-4"></div> <!-- Placeholder for co-founder 1 image -->
-                    <p class="text-xl font-semibold text-stone-700">John Doe</p>
-                    <p class="text-stone-500">CEO & Co-founder</p>
+                    <div class="bg-gray-300 w-48 h-48 rounded-full mx-auto mb-4">
+                        <a href="https://www.linkedin.com/in/sherin-roy-atmost/" target="_blank" rel="noopener noreferrer" class="mr-2">
+                            <img src="/static/sherin.png" alt="Sherin Joseph Roy" class="w-full h-full object-cover rounded-full">
+                        </a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/sherin-roy-atmost/" class="text-xl font-semibold text-stone-700 mr-2 hover:text-[#CC785C]" target="_blank" rel="noopener noreferrer">
+                    Sherin Joseph Roy
+                    </a>
+                    <!-- p class="text-stone-500">CEO & Co-founder</p -->
                 </div>
                 <div class="text-center">
-                    <div class="bg-gray-300 w-48 h-48 rounded-full mx-auto mb-4"></div> <!-- Placeholder for co-founder 2 image -->
-                    <p class="text-xl font-semibold text-stone-700">Jane Smith</p>
-                    <p class="text-stone-500">CTO & Co-founder</p>
+                    <div class="bg-gray-300 w-48 h-48 rounded-full mx-auto mb-4">
+                        <a href="https://www.linkedin.com/in/mahesh-r/" target="_blank" rel="noopener noreferrer" class="mr-2">
+                            <img src="/static/mahesh.jpeg" alt="Mahesh R" class="w-full h-full object-cover rounded-full">
+                        </a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/mahesh-r/" class="text-xl font-semibold text-stone-700 mr-2 hover:text-[#CC785C]" target="_blank" rel="noopener noreferrer" class="mr-2">
+                        Mahesh R
+                    </a>
+                    <!-- p class="text-stone-500">CTO & Co-founder</p -->
                 </div>
             </div>
         </div>
