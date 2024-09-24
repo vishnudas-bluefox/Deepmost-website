@@ -8,6 +8,7 @@ from fastapi import FastAPI, Request, HTTPException
 
 
 app = FastAPI()
+send_mail_to = "https://formcarry.com/s/AqfcQ_gH0M_"
 
 
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
@@ -25,7 +26,10 @@ app.add_middleware(
 
 @app.get("/")
 async def root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {
+        "request": request, 
+        "send_mail_to": send_mail_to
+    })
 
 
 if __name__ == "__main__":

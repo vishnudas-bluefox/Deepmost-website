@@ -32,18 +32,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    
-    var mailtoLink = 'mailto:aswanthmanoj51@gmail.com'
-        + '?subject=' + encodeURIComponent('Contact from ' + name)
-        + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-    
-    window.location.href = mailtoLink;
-});
