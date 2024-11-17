@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="shortcut icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Include Alpine.js if not already present -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link href="/static/index.css" rel="stylesheet">
 </head>
+
 <body class="font-sans bg-stone-100">
     <!-- Navbar -->
     <nav class="bg-[#E6E4DD] p-4" x-data="{ isOpen: false }">
@@ -17,11 +21,13 @@
                 <img src="static/logo.png" alt="DeepMost Logo" class="h-8 w-auto mr-2">
                 <a href="#" class="text-stone-700 text-2xl font-extrabold">DeepMost</a>
             </div>
-            
+
             <!-- Hamburger button -->
             <button @click="isOpen = !isOpen" class="md:hidden text-white focus:outline-none ">
-                <svg class="w-6 h-6 text-stone-600 focus:text-[#CC785C] hover:text-[#CC785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <svg class="w-6 h-6 text-stone-600 focus:text-[#CC785C] hover:text-[#CC785C]" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
 
@@ -32,10 +38,15 @@
                 <div class="relative group">
                     <button class="focus:outline-none focus:text-[#CC785C] hover:text-[#CC785C]">
                         Product
-                        <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="absolute hidden group-hover:block bg-stone-100 mt-1 py-2 w-32 rounded-lg shadow-xl">
-                        <a href="#lexeek" id="go-to-lexeek" class="block px-4 py-2 hover:bg-stone-200 focus:text-[#CC785C] hover:text-[#CC785C]">Lexeek</a>
+                        <a href="#lexeek" id="go-to-lexeek"
+                            class="block px-4 py-2 hover:bg-stone-200 focus:text-[#CC785C] hover:text-[#CC785C]">Lexeek</a>
                     </div>
                 </div>
             </div>
@@ -44,15 +55,25 @@
         <!-- Mobile menu -->
         <div class="md:hidden text-stone-600" x-show="isOpen" @click.away="isOpen = false">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" id="go-to-about" class="block px-3 py-2 rounded-md text-base font-medium focus:text-[#CC785C] hover:text-[#CC785C]">About Us</a>
-                <a href="#contact" id="go-to-contact" class="block px-3 py-2 rounded-md text-base font-medium focus:text-[#CC785C] hover:text-[#CC785C]">Contact Us</a>
+                <a href="#about" id="go-to-about"
+                    class="block px-3 py-2 rounded-md text-base font-medium focus:text-[#CC785C] hover:text-[#CC785C]">About
+                    Us</a>
+                <a href="#contact" id="go-to-contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium focus:text-[#CC785C] hover:text-[#CC785C]">Contact
+                    Us</a>
                 <div x-data="{ isProductOpen: false }">
-                    <button @click="isProductOpen = !isProductOpen" class="block px-3 py-2 rounded-md text-base font-medium w-full text-left focus:text-[#CC785C] hover:text-[#CC785C]">
+                    <button @click="isProductOpen = !isProductOpen"
+                        class="block px-3 py-2 rounded-md text-base font-medium w-full text-left focus:text-[#CC785C] hover:text-[#CC785C]">
                         Product
-                        <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div x-show="isProductOpen" class="pl-6">
-                        <a href="#lexeek" id="go-to-lexeek" class="block px-3 py-2 rounded-md text-base font-medium focus:text-[#CC785C] hover:text-[#CC785C]">Lexeek</a>
+                        <a href="#lexeek" id="go-to-lexeek"
+                            class="block px-3 py-2 rounded-md text-base font-medium focus:text-[#CC785C] hover:text-[#CC785C]">Lexeek</a>
                     </div>
                 </div>
             </div>
@@ -65,8 +86,12 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-12 text-stone-800">Transforming challenges into opportunities through technology</h1>
-                    <p class="text-lg md:text-xl mb-8 text-stone-600">At the intersection of research and reality, we craft innovative solutions that empower businesses and improve lives. Our passion for practical applications drives us to turn cutting-edge ideas into user-friendly products that make a real difference in the world.</p>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-12 text-stone-800">Transforming challenges into
+                        opportunities through technology</h1>
+                    <p class="text-lg md:text-xl mb-8 text-stone-600">At the intersection of research and reality, we
+                        craft innovative solutions that empower businesses and improve lives. Our passion for practical
+                        applications drives us to turn cutting-edge ideas into user-friendly products that make a real
+                        difference in the world.</p>
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
@@ -88,7 +113,16 @@
                 </div>
                 <div class="w-full md:w-1/2 md:pl-10">
                     <h2 id="about-us" class="text-5xl md:text-6xl font-bold mb-6 text-stone-800">Our Mission</h2>
-                    <p class="text-lg md:text-xl mb-8 text-stone-600">At DeepMost, we're passionate about turning cutting-edge research into meaningful, user-friendly products that drive business growth and societal progress. Our team is dedicated to bridging the gap between complex technological advancements and everyday needs. We don't chase buzzwords or trends; instead, we focus on creating practical solutions that make a tangible difference. Whether it's enhancing website interactions, improving medical diagnoses, or boosting public safety, our goal is always the same: to develop tools that are both powerful and accessible. We believe that true innovation lies in making advanced technology work seamlessly for businesses and individuals alike. By prioritizing usability and real-world applications, we're committed to delivering products that not only impress but also truly serve our clients and society at large.</p>
+                    <p class="text-lg md:text-xl mb-8 text-stone-600">At DeepMost, we're passionate about turning
+                        cutting-edge research into meaningful, user-friendly products that drive business growth and
+                        societal progress. Our team is dedicated to bridging the gap between complex technological
+                        advancements and everyday needs. We don't chase buzzwords or trends; instead, we focus on
+                        creating practical solutions that make a tangible difference. Whether it's enhancing website
+                        interactions, improving medical diagnoses, or boosting public safety, our goal is always the
+                        same: to develop tools that are both powerful and accessible. We believe that true innovation
+                        lies in making advanced technology work seamlessly for businesses and individuals alike. By
+                        prioritizing usability and real-world applications, we're committed to delivering products that
+                        not only impress but also truly serve our clients and society at large.</p>
                 </div>
             </div>
         </div>
@@ -98,21 +132,33 @@
     <section class="py-20 bg-[#E6E4DD] full-height-section">
         <div class="container mx-auto px-4">
             <h2 class="text-5xl md:text-6xl font-bold mb-6 text-stone-800">Products</h2>
-            
+
             <p class="text-lg md:text-xl mb-8 text-stone-600">
-                We're dedicated to creating products that solve real-world problems. Our approach combines cutting-edge research with practical applications, always focusing on user needs and business value. While our vision extends to various sectors including healthcare and public safety, we're currently channeling our expertise into our flagship product:
+                We're dedicated to creating products that solve real-world problems. Our approach combines cutting-edge
+                research with practical applications, always focusing on user needs and business value. While our vision
+                extends to various sectors including healthcare and public safety, we're currently channeling our
+                expertise into our flagship product:
             </p>
 
             <div class="flex flex-col md:flex-row items-start mt-12">
                 <div id="lexeek" class="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
                     <h3 class="text-3xl md:text-4xl font-semibold mb-4 text-stone-700">Lexeek</h3>
                     <p class="text-lg md:text-xl mb-8 text-stone-600">
-        We recognized a common challenge: website visitors often struggle to find the specific information they need, leading to frustration and missed opportunities. Traditional search functions often fall short, leaving potential customers unable to quickly grasp what a business offers.
+                        We recognized a common challenge: website visitors often struggle to find the specific
+                        information they need, leading to frustration and missed opportunities. Traditional search
+                        functions often fall short, leaving potential customers unable to quickly grasp what a business
+                        offers.
                     </p>
                     <p class="text-lg md:text-xl mb-8 text-stone-600">
-        Lexeek is our solution – an intelligent search platform that improves how people interact with websites. It goes beyond basic keyword matching, aiming to understand user intent and deliver relevant results quickly. With Lexeek, businesses can help their visitors find information effortlessly, making even complex websites easy to navigate. Our goal is simple: connect users with the right information at the right time, helping turn curious visitors into informed customers.
+                        Lexeek is our solution – an intelligent search platform that improves how people interact with
+                        websites. It goes beyond basic keyword matching, aiming to understand user intent and deliver
+                        relevant results quickly. With Lexeek, businesses can help their visitors find information
+                        effortlessly, making even complex websites easy to navigate. Our goal is simple: connect users
+                        with the right information at the right time, helping turn curious visitors into informed
+                        customers.
                     </p>
-                    <a href="https://lexeek.onrender.com/" target="_blank" rel="noopener noreferrer" class="inline-block py-3 px-6 rounded-lg text-lg font-semibold transition duration-300 explore-lexeek-button">
+                    <a href="#contact" rel="noopener noreferrer"
+                        class="inline-block py-3 px-6 rounded-lg text-lg font-semibold transition duration-300 explore-lexeek-button">
                         Explore Lexeek
                     </a>
                 </div>
@@ -132,22 +178,30 @@
             <div class="flex flex-col md:flex-row justify-center md:space-x-20 space-y-10 md:space-y-0">
                 <div class="text-center">
                     <div class="bg-stone-300 w-48 h-48 rounded-full mx-auto mb-4">
-                        <a href="https://www.linkedin.com/in/sherin-roy-atmost/" target="_blank" rel="noopener noreferrer" class="mr-2">
-                            <img src="/static/sherin2.png" alt="Sherin Joseph Roy" class="w-full h-full object-cover rounded-full">
+                        <a href="https://www.linkedin.com/in/sherin-roy-atmost/" target="_blank"
+                            rel="noopener noreferrer" class="mr-2">
+                            <img src="/static/sherin2.png" alt="Sherin Joseph Roy"
+                                class="w-full h-full object-cover rounded-full">
                         </a>
                     </div>
-                    <a href="https://www.linkedin.com/in/sherin-roy-atmost/" class="text-xl font-semibold text-stone-700 mr-2 hover:text-[#CC785C]" target="_blank" rel="noopener noreferrer">
-                    Sherin Joseph Roy
+                    <a href="https://www.linkedin.com/in/sherin-roy-atmost/"
+                        class="text-xl font-semibold text-stone-700 mr-2 hover:text-[#CC785C]" target="_blank"
+                        rel="noopener noreferrer">
+                        Sherin Joseph Roy
                     </a>
                     <!-- p class="text-stone-500">CEO & Co-founder</p -->
                 </div>
                 <div class="text-center">
                     <div class="bg-stone-300 w-48 h-48 rounded-full mx-auto mb-4">
-                        <a href="https://www.linkedin.com/in/mahesh-r/" target="_blank" rel="noopener noreferrer" class="mr-2">
-                            <img src="/static/mahesh2.png" alt="Mahesh R" class="w-full h-full object-cover rounded-full">
+                        <a href="https://www.linkedin.com/in/mahesh-r/" target="_blank" rel="noopener noreferrer"
+                            class="mr-2">
+                            <img src="/static/mahesh2.png" alt="Mahesh R"
+                                class="w-full h-full object-cover rounded-full">
                         </a>
                     </div>
-                    <a href="https://www.linkedin.com/in/mahesh-r/" class="text-xl font-semibold text-stone-700 mr-2 hover:text-[#CC785C]" target="_blank" rel="noopener noreferrer" class="mr-2">
+                    <a href="https://www.linkedin.com/in/mahesh-r/"
+                        class="text-xl font-semibold text-stone-700 mr-2 hover:text-[#CC785C]" target="_blank"
+                        rel="noopener noreferrer" class="mr-2">
                         Mahesh Nair
                     </a>
                     <!-- p class="text-stone-500">CTO & Co-founder</p -->
@@ -161,18 +215,23 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-stone-400">Contact Us</h2>
             <div class="max-w-lg mx-auto">
-                <form id="contact-form" class="space-y-6"  action="https://formcarry.com/s/AqfcQ_gH0M_" method="POST" enctype="multipart/form-data">
+                <form id="contact-form" class="space-y-6" action="https://formcarry.com/s/AqfcQ_gH0M_" method="POST"
+                    enctype="multipart/form-data">
                     <div class="neumorphic-input-dark">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full bg-transparent px-4 py-3 rounded-lg focus:outline-none text-stone-200">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required
+                            class="w-full bg-transparent px-4 py-3 rounded-lg focus:outline-none text-stone-200">
                     </div>
                     <div class="neumorphic-input-dark">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full bg-transparent px-4 py-3 rounded-lg focus:outline-none text-stone-200">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required
+                            class="w-full bg-transparent px-4 py-3 rounded-lg focus:outline-none text-stone-200">
                     </div>
                     <div class="neumorphic-input-dark">
-                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required class="w-full bg-transparent px-4 py-3 rounded-lg focus:outline-none text-stone-200"></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required
+                            class="w-full bg-transparent px-4 py-3 rounded-lg focus:outline-none text-stone-200"></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="text-stone-200 px-6 py-3 rounded-lg font-semibold transition-all duration-300 neumorphic-button">
+                        <button type="submit"
+                            class="text-stone-200 px-6 py-3 rounded-lg font-semibold transition-all duration-300 neumorphic-button">
                             Send Message
                         </button>
                     </div>
@@ -187,4 +246,5 @@
 
     <script src="/static/index.js"></script>
 </body>
+
 </html>
